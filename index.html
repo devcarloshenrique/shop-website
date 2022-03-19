@@ -1,12 +1,89 @@
-shop
-My Account
-Search
-WOMEN
-MEN
-SHOES
-BRAND
-BRAND SWEATSHIRT
-$1000
-PREV
-NEXT
-ADD TO CART
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Sweatshirt</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <script>
+        var increment = () => document.getElementById('demoInput').stepUp();
+        var decrement = () => document.getElementById('demoInput').stepDown();                        
+    </script>
+</head>
+<body>
+    <div class="background-img">
+        <div class="header container">
+            <div class="logo">
+                <p>shop</p>
+            </div>
+            <nav class="navigation-bar">
+                <ul>
+                    <li>my account</li>
+                    <li>search</li>
+                </ul>
+                <div class="icons">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+            </nav>
+        </div>
+
+        <div class="side-bar">
+            <ul class="category">
+                <li>women</li>
+                <li>men</li>
+                <li>shoes</li>
+                <li>brand</li>
+            </ul>
+
+            <div class="container-title">
+                <h1>Brand<br>Sweatshirt</h1>                
+                <span class="sweatshirt-value">$1000</span>
+                <button class="cta-prev">
+                    <span>←</span>
+                    <span>Prev</span>
+                </button>
+            </div>
+
+            <div class="container-cart">
+                <button class="cta-next">
+                    <span>Next</span>
+                    <span>→</span>
+                </button>
+
+                <ul class="sweatshirt-sizes">
+                    <li>
+                        <input  class="selector_item-radio"  name="selector" type="radio" id="op-1">
+                        <label class="selector_item-label" for="op-1">S</label>
+                    </li>
+                    <li>
+                        <input  class="selector_item-radio"  name="selector" type="radio" id="op-2">
+                        <label class="selector_item-label" for="op-2">M</label>
+                    </li>
+                    <li>
+                        <input  class="selector_item-radio"  name="selector" type="radio" id="op-3">
+                        <label class="selector_item-label" for="op-3">L</label>
+                    </li>
+                </ul>
+
+                <div class="sweatshirt-amount">
+                    <button class="decrement" onclick="decrement()">-</button>
+                    <input id="demoInput" value="1" type="number" min="1" max="10" readonly>
+                    <button class="increment" onclick="increment()">+</button>
+                    <button class="add-cart">add to cart</button>
+                </div>
+
+                
+            </div>
+
+
+
+        </div>
+
+    </div>    
+
+</body>
+</html>
